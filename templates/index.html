@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>African Food & Catering in Cleveland & Akron | Ova Signature</title>
+
+    <meta
+      name="description"
+      content="Ova Signature offers authentic Cameroonian and African food and catering in Cleveland, Akron, and surrounding Ohio areas. Call to order authentic African cuisine or book catering for your next event."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://ovasignature.com/" />
+
+    <meta
+      property="og:title"
+      content="Ova Signature | African Food & Catering in Cleveland & Akron"
+    />
+
+    <meta
+      property="og:description"
+      content="Authentic Cameroonian and African cuisine and catering serving Cleveland, Akron, and surrounding Ohio areas."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ovasignature.com/" />
+
+    <meta
+      property="og:image"
+      content="https://ovasignature.com/static/images/eru.jpeg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "Ova Signature African Cuisine & Catering",
+        "url": "https://ovasignature.com/",
+        "telephone": "+1-216-418-8226",
+        "description": "Authentic Cameroonian and African food and catering serving Cleveland, Akron, and surrounding Ohio areas.",
+        "servesCuisine": ["African", "Cameroonian"],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Cleveland",
+            "addressRegion": "OH"
+          },
+          {
+            "@type": "City",
+            "name": "Akron",
+            "addressRegion": "OH"
+          }
+        ]
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body id="home">
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="#home" class="navbar-brand"> Ova Signature </a>
+
+        <div class="navbar-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#catering">Catering</a>
+          <a href="tel:+12164188226">Call</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Ova Signature</h1>
+
+        <h2>African Cuisine &amp; Catering</h2>
+
+        <p>Authentic African &amp; Cameroonian Cuisine</p>
+
+        <div class="hero-food-gallery">
+          <img
+            src="{{ url_for('static', filename='images/eru.jpeg') }}"
+            alt="Authentic Cameroonian Eru African food"
+            onclick="openModal(
+              '{{ url_for('static', filename='images/eru.jpeg') }}',
+              'Eru',
+              'A traditional Cameroonian vegetable dish prepared with bold African flavors.'
+            )"
+          />
+
+          <img
+            src="{{ url_for('static', filename='images/fufu-corn.jpeg') }}"
+            alt="Traditional Cameroonian Fufu Corn African food"
+            onclick="openModal(
+              '{{ url_for('static', filename='images/fufu-corn.jpeg') }}',
+              'Fufu Corn',
+              'Traditional Cameroonian fufu corn served with flavorful African soups and vegetables.'
+            )"
+          />
+
+          <img
+            src="{{ url_for('static', filename='images/friedrice.jpeg') }}"
+            alt="African Fried Rice from Ova Signature"
+            onclick="openModal(
+              '{{ url_for('static', filename='images/friedrice.jpeg') }}',
+              'Fried Rice',
+              'Flavorful African-style fried rice prepared with vegetables and traditional seasonings.'
+            )"
+          />
+
+          <img
+            src="{{ url_for('static', filename='images/fried-chiken.jpeg') }}"
+            alt="African seasoned Fried Chicken from Ova Signature"
+            onclick="openModal(
+              '{{ url_for('static', filename='images/fried-chiken.jpeg') }}',
+              'Fried Chicken',
+              'Crispy, flavorful fried chicken seasoned and prepared with delicious African-inspired flavors.'
+            )"
+          />
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn"> View Our Menu </a>
+
+          <a href="tel:+12164188226" class="btn btn-outline"> Call to Order </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU -->
+    <section id="menu" class="menu-flyer-section">
+      <h2>Our Menu</h2>
+
+      <p>Authentic Cameroonian and African favorites from Ova Signature.</p>
+
+      <img
+        class="menu-flyer"
+        src="{{ url_for('static', filename='images/menu.jpg') }}"
+        alt="Ova Signature African Cuisine and Catering menu serving Cleveland and Akron"
+        onclick="openModal(
+          '{{ url_for('static', filename='images/menu.jpg') }}',
+          'Ova Signature Menu',
+          'Explore our selection of authentic Cameroonian and African dishes.'
+        )"
+      />
+
+      <p class="menu-click-text">Click the menu to view it larger.</p>
+    </section>
+
+    <!-- CATERING -->
+    <section id="catering" class="catering-section">
+      <div class="catering-content">
+        <h2>Catering for Every Occasion</h2>
+
+        <p>
+          Ova Signature offers authentic African catering for weddings,
+          birthdays, graduations, church events, family gatherings, corporate
+          events, and special celebrations.
+        </p>
+
+        <p>Serving Cleveland, Akron, and surrounding areas.</p>
+
+        <div class="catering-buttons">
+          <a href="tel:+12164188226" class="btn"> Call for Catering </a>
+
+          <a
+            href="https://wa.me/12164188226?text=Hello%20Ova%20Signature,%20I%20would%20like%20to%20ask%20about%20catering."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <h3>Ova Signature</h3>
+
+      <p>African Cuisine &amp; Catering</p>
+
+      <p>Serving Cleveland, Akron, and surrounding areas.</p>
+
+      <a href="tel:+12164188226"> +1 (216) 418-8226 </a>
+
+      <p class="copyright">
+        &copy; 2026 Ova Signature African Cuisine &amp; Catering. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/12164188226?text=Hello%20Ova%20Signature,%20I%20would%20like%20to%20place%20an%20order."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Message Ova Signature on WhatsApp"
+    >
+      <img
+        src="{{ url_for('static', filename='images/vector-whatsapp-social-media-logo_1093524-447.avif') }}"
+        alt="WhatsApp"
+      />
+    </a>
+
+    <!-- IMAGE POPUP -->
+    <div id="foodModal" class="food-modal">
+      <div class="food-modal-content">
+        <button
+          class="modal-close"
+          type="button"
+          onclick="closeModal()"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+
+        <img id="modalImage" src="" alt="" />
+
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(image, title, description) {
+        const modal = document.getElementById("foodModal");
+        const modalImage = document.getElementById("modalImage");
+
+        modalImage.src = image;
+        modalImage.alt = title;
+
+        document.getElementById("modalTitle").textContent = title;
+        document.getElementById("modalDescription").textContent = description;
+
+        modal.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("foodModal").classList.remove("show");
+
+        document.body.style.overflow = "";
+      }
+
+      document
+        .getElementById("foodModal")
+        .addEventListener("click", function (event) {
+          if (event.target === this) {
+            closeModal();
+          }
+        });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
