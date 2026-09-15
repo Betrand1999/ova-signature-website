@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -8,139 +12,161 @@ html {
 
 body {
   margin: 0;
+
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #173f2a;
-  color: #ffffff;
+
+  background-color: #fffaf0;
+
+  color: #25251f;
+
   line-height: 1.6;
 }
 
 /* =========================
-     NAVIGATION
-  ========================= */
+   NAVIGATION
+========================= */
 
 .navbar {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
-  background-color: #173f2a;
+  background-color: #fffaf0;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #e7dfcf;
 }
 
 .navbar-inner {
-  max-width: 1100px;
+  width: 100%;
+
+  max-width: 1200px;
+
+  min-height: 78px;
+
   margin: 0 auto;
 
+  padding: 0 25px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
-  padding: 14px 20px;
+  gap: 35px;
 }
 
 .navbar-brand {
-  color: #d9a62e;
+  color: #173f2a;
+
   text-decoration: none;
-  font-size: 22px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 27px;
+
   font-weight: bold;
 }
 
 .navbar-links {
   display: flex;
+
   align-items: center;
-  gap: 25px;
+
+  gap: 30px;
 }
 
 .navbar-links a {
-  color: #ffffff;
+  color: #292920;
+
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
+
+  font-size: 14px;
+
+  font-weight: 700;
 }
 
 .navbar-links a:hover {
-  color: #d9a62e;
+  color: #b58216;
 }
 
 /* =========================
-     HERO
-  ========================= */
+   HERO
+========================= */
 
 .hero {
-  background-color: #173f2a;
-  color: #fff8ea;
-  text-align: center;
-  padding: 42px 20px 48px;
+  position: relative;
+  min-height: 660px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(rgba(8, 25, 15, 0.42), rgba(8, 25, 15, 0.52)),
+    url("../images/achu-soup.webp");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
-  max-width: 1100px;
-  margin: auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 90px 25px;
+  color: #ffffff;
+}
+
+.eyebrow {
+  color: #e3ae2d;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
 }
 
 .hero h1 {
-  font-size: 56px;
-  margin: 0;
-  color: #d9a62e;
-}
+  max-width: 850px;
 
-.hero h2 {
-  font-size: 30px;
-  margin: 5px 0 8px;
-  font-weight: 500;
+  margin: 14px 0 22px;
+
   color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(50px, 7vw, 88px);
+
+  font-weight: 500;
+
+  line-height: 1;
 }
 
 .hero p {
-  font-size: 18px;
-  margin: 0 0 24px;
+  max-width: 620px;
+
+  margin: 0 0 32px;
+
   color: #ffffff;
+
+  font-size: 19px;
 }
 
 /* =========================
-     TOP FOOD IMAGES
-  ========================= */
-
-.hero-food-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-
-  max-width: 920px;
-
-  margin: 0 auto 28px;
-}
-
-.hero-food-gallery img {
-  width: 100%;
-  height: 155px;
-
-  object-fit: cover;
-  display: block;
-
-  border-radius: 10px;
-  border: 2px solid #d9a62e;
-
-  cursor: zoom-in;
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.hero-food-gallery img:hover {
-  transform: scale(1.04);
-
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
-}
-
-/* =========================
-     BUTTONS
-  ========================= */
+   BUTTONS
+========================= */
 
 .hero-buttons {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+
+  gap: 14px;
 
   flex-wrap: wrap;
 }
@@ -148,175 +174,542 @@ body {
 .btn {
   display: inline-block;
 
+  padding: 14px 26px;
+
   background-color: #d9a62e;
+
+  border: 2px solid #d9a62e;
+
   color: #173f2a;
 
   text-decoration: none;
 
-  padding: 14px 30px;
+  font-weight: 800;
 
-  border-radius: 6px;
-  border: 2px solid #d9a62e;
-
-  font-weight: bold;
-
-  transition: 0.3s;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #ffffff;
-  color: #173f2a;
-  border-color: #ffffff;
+  background-color: #efbd43;
+
+  border-color: #efbd43;
+
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   background-color: transparent;
+
+  border-color: #ffffff;
+
   color: #ffffff;
 }
 
 .btn-outline:hover {
-  background-color: #d9a62e;
+  background-color: #ffffff;
+
+  border-color: #ffffff;
+
   color: #173f2a;
-  border-color: #d9a62e;
 }
 
 /* =========================
-     MENU FLYER
-  ========================= */
+   INTRO
+========================= */
 
-.menu-flyer-section {
-  background-color: #173f2a;
-  color: #ffffff;
-
-  text-align: center;
-
-  padding: 70px 20px 85px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.menu-flyer-section h2 {
-  color: #d9a62e;
-
-  font-size: 40px;
-
-  margin: 0 0 8px;
-}
-
-.menu-flyer-section > p {
-  font-size: 18px;
-
-  margin: 0 0 30px;
-}
-
-.menu-flyer {
-  display: block;
-
-  width: 100%;
-  max-width: 650px;
-  height: auto;
+.intro-section {
+  max-width: 800px;
 
   margin: 0 auto;
 
-  border-radius: 12px;
-  border: 3px solid #d9a62e;
+  padding: 95px 25px 55px;
 
-  cursor: zoom-in;
+  text-align: center;
+}
 
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+.section-label {
+  color: #b58216;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.intro-section h2 {
+  margin: 10px 0 15px;
+
+  color: #173f2a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+}
+
+.intro-section p {
+  margin: 0;
+
+  color: #686457;
+
+  font-size: 18px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu-section {
+  padding: 50px 25px 105px;
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 9px 0 14px;
+
+  color: #173f2a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+}
+
+.section-heading p {
+  margin: 0 auto;
+
+  color: #686457;
+
+  font-size: 17px;
+}
+
+.section-heading strong {
+  color: #173f2a;
+}
+
+/* =========================
+   MENU CONTACT BUTTONS
+========================= */
+
+.menu-contact-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.menu-whatsapp {
+  background-color: #173f2a;
+
+  border-color: #173f2a;
+
+  color: #ffffff;
+}
+
+.menu-whatsapp:hover {
+  background-color: #245c3e;
+
+  border-color: #245c3e;
+
+  color: #ffffff;
+}
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card {
+  overflow: hidden;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e7dfcf;
+
+  box-shadow: 0 10px 35px rgba(45, 40, 25, 0.08);
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.menu-flyer:hover {
-  transform: scale(1.015);
+.menu-card:hover {
+  transform: translateY(-5px);
 
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 17px 45px rgba(45, 40, 25, 0.15);
 }
 
-.menu-click-text {
-  margin-top: 18px !important;
-  margin-bottom: 0 !important;
+.menu-card img {
+  display: block;
 
-  font-size: 14px !important;
+  width: 100%;
 
-  opacity: 0.8;
+  height: 280px;
+
+  object-fit: cover;
 }
 
 /* =========================
-     CATERING
-  ========================= */
+   IMAGE PLACEHOLDER
+========================= */
 
-.catering-section {
-  background-color: #173f2a;
-  color: #ffffff;
+.food-placeholder {
+  width: 100%;
 
-  text-align: center;
+  height: 280px;
 
-  padding: 80px 25px;
+  display: flex;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
+  align-items: center;
 
-.catering-content {
-  max-width: 800px;
+  justify-content: center;
 
-  margin: auto;
-}
+  background: linear-gradient(135deg, #173f2a, #245c3e);
 
-.catering-section h2 {
   color: #d9a62e;
 
-  font-size: 38px;
+  font-family: Georgia, "Times New Roman", serif;
 
-  margin-top: 0;
-  margin-bottom: 25px;
+  font-size: 30px;
+
+  text-align: center;
 }
 
-.catering-section p {
+/* =========================
+   CARD CONTENT
+========================= */
+
+.menu-card-content {
+  padding: 25px;
+}
+
+.menu-card h3 {
+  margin: 0 0 8px;
+
+  color: #173f2a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+}
+
+.dish-description {
+  min-height: 52px;
+
+  margin: 0 0 18px;
+
+  color: #777164;
+
+  font-size: 14px;
+}
+
+/* =========================
+   PRICES
+========================= */
+
+.prices {
+  margin-top: 5px;
+
+  padding: 14px 0;
+
+  border-top: 1px solid #ece5d8;
+
+  border-bottom: 1px solid #ece5d8;
+}
+
+.prices span {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 5px 0;
+
+  color: #514c40;
+}
+
+.prices span b {
+  color: #173f2a;
+
+  font-weight: 700;
+}
+
+.prices span strong {
+  color: #b58216;
+
+  font-size: 16px;
+}
+
+.single-price {
+  margin-top: 5px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid #ece5d8;
+
+  border-bottom: 1px solid #ece5d8;
+
+  color: #b58216;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+/* =========================
+   CALL TO ORDER SECTION
+========================= */
+
+.call-section {
+  padding: 90px 25px;
+
+  background-color: #f1e8d6;
+
+  text-align: center;
+}
+
+.call-content {
   max-width: 750px;
 
-  margin: 10px auto;
-
-  font-size: 18px;
-
-  color: #ffffff;
+  margin: 0 auto;
 }
 
-.catering-buttons {
+.call-section h2 {
+  margin: 8px 0 15px;
+
+  color: #173f2a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 46px;
+
+  line-height: 1.1;
+}
+
+.call-section p {
+  max-width: 620px;
+
+  margin: 0 auto 28px;
+
+  color: #686457;
+
+  font-size: 17px;
+}
+
+.call-buttons {
   display: flex;
+
   justify-content: center;
 
   gap: 14px;
 
   flex-wrap: wrap;
-
-  margin-top: 25px;
 }
 
-.catering-buttons .btn {
-  margin-top: 0;
+.call-whatsapp {
+  background-color: #173f2a;
+
+  border-color: #173f2a;
+
+  color: #ffffff;
+}
+
+.call-whatsapp:hover {
+  background-color: #245c3e;
+
+  border-color: #245c3e;
+
+  color: #ffffff;
 }
 
 /* =========================
-     WHATSAPP BUTTON
-  ========================= */
+   CATERING
+========================= */
 
-.btn-whatsapp {
-  background-color: #ffffff;
-  color: #173f2a;
+.catering-section {
+  padding: 105px 25px;
+
+  background-color: #173f2a;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.catering-content {
+  max-width: 780px;
+
+  margin: 0 auto;
+}
+
+.light-label {
+  color: #d9a62e;
+}
+
+.catering-section h2 {
+  margin: 10px 0 22px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 54px;
+
+  line-height: 1.05;
+}
+
+.catering-section p {
+  margin: 10px auto;
+
+  color: #e8e1d3;
+
+  font-size: 17px;
+}
+
+.serving-area {
+  margin-bottom: 30px !important;
+
+  font-weight: 700;
+}
+
+.catering-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.btn-light {
+  background-color: transparent;
+
   border-color: #ffffff;
+
+  color: #ffffff;
 }
 
-.btn-whatsapp:hover {
-  background-color: #d9a62e;
+.btn-light:hover {
+  background-color: #ffffff;
+
+  border-color: #ffffff;
+
   color: #173f2a;
-  border-color: #d9a62e;
 }
 
 /* =========================
-     FLOATING WHATSAPP
-  ========================= */
+   FOOTER
+========================= */
+
+footer {
+  padding: 60px 25px 25px;
+
+  background-color: #0e291b;
+
+  color: #ffffff;
+}
+
+.footer-inner {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr 1fr;
+
+  gap: 45px;
+}
+
+footer h3 {
+  margin: 0 0 5px;
+
+  color: #d9a62e;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+}
+
+footer p {
+  margin: 5px 0;
+
+  color: #d9d4c8;
+}
+
+footer strong {
+  color: #d9a62e;
+}
+
+footer a {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #d9a62e;
+}
+
+.copyright {
+  max-width: 1200px;
+
+  margin: 45px auto 0;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #aaa69c;
+
+  font-size: 13px;
+}
 
 /* =========================
    FLOATING WHATSAPP
@@ -324,301 +717,198 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  right: 25px;
-  bottom: 25px;
+
+  right: 22px;
+
+  bottom: 22px;
+
   z-index: 3000;
 
-  width: 64px;
-  height: 64px;
+  width: 62px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  text-decoration: none;
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.whatsapp-float img {
-  width: 64px;
-  height: 64px;
+  height: 62px;
 
   display: block;
 
-  object-fit: contain;
-
-  border-radius: 50%;
-
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
-  .whatsapp-float {
-    right: 15px;
-    bottom: 15px;
+.whatsapp-float img {
+  display: block;
 
-    width: 58px;
-    height: 58px;
-  }
-
-  .whatsapp-float img {
-    width: 58px;
-    height: 58px;
-  }
-}
-
-/* =========================
-     FOOTER
-  ========================= */
-
-footer {
-  background-color: #173f2a;
-  color: #ffffff;
-
-  text-align: center;
-
-  padding: 40px 25px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-footer h3 {
-  color: #d9a62e;
-
-  font-size: 26px;
-
-  margin: 0 0 5px;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  display: inline-block;
-
-  color: #d9a62e;
-
-  text-decoration: none;
-
-  font-weight: bold;
-
-  margin-top: 8px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.copyright {
-  margin-top: 25px;
-
-  font-size: 14px;
-
-  opacity: 0.75;
-}
-
-/* =========================
-     LARGE IMAGE POPUP
-  ========================= */
-
-.food-modal {
-  position: fixed;
-  inset: 0;
-
-  z-index: 9999;
-
-  display: none;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.food-modal.show {
-  display: flex;
-}
-
-.food-modal-content {
-  position: relative;
-
-  width: 95%;
-  max-width: 1100px;
-  max-height: 95vh;
-
-  overflow-y: auto;
-
-  background-color: #173f2a;
-
-  border-radius: 14px;
-  border: 2px solid #d9a62e;
-
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
-}
-
-.food-modal-content img {
   width: 100%;
-  max-height: 78vh;
+
+  height: 100%;
 
   object-fit: contain;
 
-  display: block;
-
-  background-color: #111;
-}
-
-.modal-info {
-  padding: 22px;
-
-  text-align: center;
-}
-
-.modal-info h2 {
-  margin: 0 0 8px;
-
-  color: #d9a62e;
-
-  font-size: 30px;
-}
-
-.modal-info p {
-  max-width: 700px;
-
-  margin: auto;
-
-  color: #ffffff;
-}
-
-/* =========================
-     CLOSE BUTTON
-  ========================= */
-
-.modal-close {
-  position: absolute;
-
-  top: 15px;
-  right: 15px;
-
-  z-index: 3;
-
-  width: 46px;
-  height: 46px;
-
-  border: none;
   border-radius: 50%;
 
-  background-color: #d9a62e;
-  color: #173f2a;
-
-  font-size: 30px;
-  line-height: 1;
-
-  cursor: pointer;
-
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
 }
 
 /* =========================
-     TABLET
-  ========================= */
+   TABLET
+========================= */
 
-@media (max-width: 900px) {
-  .hero-food-gallery {
+@media (max-width: 950px) {
+  .menu-grid {
     grid-template-columns: repeat(2, 1fr);
-
-    max-width: 650px;
   }
 
-  .hero-food-gallery img {
-    height: 170px;
+  .navbar-inner {
+    min-height: 72px;
   }
 }
 
 /* =========================
-     MOBILE
-  ========================= */
+   MOBILE
+========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .navbar-inner {
+    min-height: 70px;
+
+    padding: 10px 15px;
+
     flex-direction: column;
 
-    gap: 10px;
+    justify-content: center;
+
+    gap: 5px;
+  }
+
+  .navbar-brand {
+    font-size: 22px;
   }
 
   .navbar-links {
     gap: 18px;
   }
 
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  /* HERO */
+
   .hero {
-    padding: 34px 15px 40px;
+    min-height: 590px;
+
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 70px 20px;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 49px;
   }
 
-  .hero h2 {
-    font-size: 25px;
-  }
-
-  .hero-food-gallery {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 9px;
-  }
-
-  .hero-food-gallery img {
-    height: 135px;
-  }
-
-  .menu-flyer-section h2 {
-    font-size: 32px;
-  }
-
-  .menu-flyer {
-    max-width: 520px;
-  }
-
-  .catering-section h2 {
-    font-size: 30px;
-  }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 600px) {
-  .navbar-links {
-    gap: 12px;
-  }
-
-  .navbar-links a {
-    font-size: 13px;
+  .hero p {
+    font-size: 17px;
   }
 
   .hero-buttons {
     flex-direction: column;
 
-    align-items: center;
+    align-items: flex-start;
   }
 
   .hero-buttons .btn {
     width: 100%;
 
     max-width: 300px;
+
+    text-align: center;
   }
 
-  .menu-flyer-section {
-    padding: 55px 15px;
+  /* INTRO */
+
+  .intro-section {
+    padding: 70px 20px 45px;
+  }
+
+  .intro-section h2 {
+    font-size: 38px;
+  }
+
+  /* MENU */
+
+  .menu-section {
+    padding: 40px 15px 75px;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .menu-contact-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .menu-contact-buttons .btn {
+    width: 100%;
+
+    max-width: 310px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+
+    gap: 23px;
+  }
+
+  .menu-card img,
+  .food-placeholder {
+    height: 280px;
+  }
+
+  .dish-description {
+    min-height: 0;
+  }
+
+  /* CALL */
+
+  .call-section {
+    padding: 70px 20px;
+  }
+
+  .call-section h2 {
+    font-size: 38px;
+  }
+
+  .call-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .call-buttons .btn {
+    width: 100%;
+
+    max-width: 310px;
+  }
+
+  /* CATERING */
+
+  .catering-section {
+    padding: 75px 20px;
+  }
+
+  .catering-section h2 {
+    font-size: 40px;
   }
 
   .catering-buttons {
@@ -630,25 +920,223 @@ footer a:hover {
   .catering-buttons .btn {
     width: 100%;
 
-    max-width: 300px;
+    max-width: 310px;
   }
+
+  /* FOOTER */
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+
+    gap: 27px;
+  }
+
+  /* WHATSAPP */
 
   .whatsapp-float {
-    right: 15px;
-    bottom: 15px;
+    right: 14px;
 
-    padding: 12px 15px;
+    bottom: 14px;
+
+    width: 56px;
+
+    height: 56px;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .navbar-links {
+    gap: 12px;
   }
 
-  .whatsapp-text {
-    display: none;
+  .hero h1 {
+    font-size: 42px;
   }
 
+  .menu-card img,
+  .food-placeholder {
+    height: 245px;
+  }
+
+  .menu-card-content {
+    padding: 21px;
+  }
+}
+
+/* ========================================
+   CLICKABLE FOOD IMAGES
+======================================== */
+
+.clickable-food {
+  cursor: zoom-in;
+}
+
+.menu-card {
+  overflow: hidden;
+}
+
+.menu-card .clickable-food {
+  transition: transform 0.3s ease;
+}
+
+.menu-card .clickable-food:hover {
+  transform: scale(1.04);
+}
+
+/* ========================================
+   FOOD IMAGE POPUP
+======================================== */
+
+.food-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.food-modal.show {
+  display: flex;
+}
+
+.food-modal-content {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  background-color: #fffaf0;
+
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.6);
+}
+
+.food-modal-content img {
+  display: block;
+
+  width: 100%;
+
+  max-height: 70vh;
+
+  object-fit: contain;
+
+  background-color: #111111;
+}
+
+.modal-info {
+  padding: 25px;
+
+  text-align: center;
+}
+
+.modal-info h2 {
+  margin: 0 0 8px;
+
+  color: #173f2a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+}
+
+.modal-info p {
+  margin: 0;
+
+  color: #b58216;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+/* CLOSE BUTTON */
+
+.modal-close {
+  position: absolute;
+
+  top: 15px;
+
+  right: 15px;
+
+  z-index: 5;
+
+  width: 46px;
+
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: #d9a62e;
+
+  color: #173f2a;
+
+  font-size: 31px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.modal-close:hover {
+  background-color: #efbd43;
+}
+
+/* MOBILE POPUP */
+
+@media (max-width: 600px) {
   .food-modal {
     padding: 10px;
   }
 
   .food-modal-content {
     width: 100%;
+
+    max-height: 95vh;
+  }
+
+  .food-modal-content img {
+    max-height: 65vh;
+  }
+
+  .modal-info {
+    padding: 20px;
+  }
+
+  .modal-info h2 {
+    font-size: 28px;
+  }
+
+  .modal-info p {
+    font-size: 16px;
   }
 }
