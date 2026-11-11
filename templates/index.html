@@ -204,10 +204,16 @@
 
         <!-- DOUGHNUTS -->
         <article class="menu-card">
-          <div class="food-placeholder">
-            <span>Ova Signature</span>
-          </div>
-
+          <img
+            src="{{ url_for('static', filename='images/Doughnuts.jpeg') }}"
+            alt="Doughnuts from Ova Signature"
+            class="clickable-food"
+            onclick="openModal(
+            '{{ url_for('static', filename='images/Doughnuts.jpeg') }}',
+            'Doughnuts',
+            'Small Tray $60 • Medium Tray $90 • Large Tray $100'
+          )"
+          />
           <div class="menu-card-content">
             <h3>Doughnuts</h3>
 
