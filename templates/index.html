@@ -448,6 +448,7 @@
         </article>
 
         <!-- FRIED SPINACH -->
+        <!-- FRIED SPINACH -->
         <article class="menu-card">
           <div class="food-placeholder">
             <span>Ova Signature</span>
@@ -465,6 +466,54 @@
               <span><b>Medium Tray</b><strong>$100</strong></span>
               <span><b>Large Tray</b><strong>$130</strong></span>
             </div>
+          </div>
+        </article>
+
+        <!-- ACCRA BEANS -->
+        <article class="menu-card">
+          <img
+            src="{{ url_for('static', filename='images/accra-beans.jpeg') }}"
+            alt="Accra Beans from Ova Signature"
+            class="clickable-food"
+            onclick="openModal(
+      '{{ url_for('static', filename='images/accra-beans.jpeg') }}',
+      'Accra Beans',
+      'Call for pricing'
+    )"
+          />
+
+          <div class="menu-card-content">
+            <h3>Accra Beans</h3>
+
+            <p class="dish-description">
+              African-style bean fritters prepared fresh.
+            </p>
+
+            <div class="single-price">Call for pricing</div>
+          </div>
+        </article>
+
+        <!-- CORNCHAFF -->
+        <article class="menu-card">
+          <img
+            src="{{ url_for('static', filename='images/cornchaff,.jpeg') }}"
+            alt="Cornchaff from Ova Signature"
+            class="clickable-food"
+            onclick="openModal(
+      '{{ url_for('static', filename='images/cornchaff,.jpeg') }}',
+      'Cornchaff',
+      'Call for pricing'
+    )"
+          />
+
+          <div class="menu-card-content">
+            <h3>Cornchaff</h3>
+
+            <p class="dish-description">
+              Traditional Cameroonian corn and beans prepared with rich flavors.
+            </p>
+
+            <div class="single-price">Call for pricing</div>
           </div>
         </article>
       </div>
